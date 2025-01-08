@@ -267,16 +267,17 @@
 
 const container = document.getElementById('itemsContainer')
  container && container.addEventListener('click', function(event){
+  event.preventDefault();
     const button  = event.target
-    if (button.tagName == 'BUTTON') {
+    if (button.tagName === 'BUTTON') {
         const item = button.closest(".item");
         if (button.classList.containes('moveUp') &&
         item.previousElementSibling
         ){
-            parent.insertBefore(item, item.previousElementSibling);
+            this.parentNode.insertBefore(item, item.previousElementSibling);
         }
         if (button.classList.containes('moveDown')&& item.nextElementSibling) {
-            parent.insertBefore(item,item.nextElementSibling.nextElementSibling)
+            this.parentNode.insertBefore(item,item.nextElementSibling)
         }
     }
  })
