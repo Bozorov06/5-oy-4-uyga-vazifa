@@ -265,20 +265,16 @@
 // Ishlatiladigan mavzular: parentNode, before, after.
 
 
-const container = document.getElementById('itemsContainer')
- container && container.addEventListener('click', function(event){
-  event.preventDefault();
-    const button  = event.target
-    if (button.tagName === 'BUTTON') {
-        const item = button.closest(".item");
-        const parent = item.parentNode
-        if (button.classList.containes('moveUp') &&
-        item.previousElementSibling
-        ){
-         parent.insertBefore(item, item.previousElementSibling);
-        }
-        if (button.classList.containes('moveDown')&& item.nextElementSibling) {
-         parent.insertBefore(item,item.nextElementSibling)
-        }
-    }
- })
+// document.getElementById("itemsContainer").addEventListener("click", function (event){
+//     const button = event.target;
+//     if (button.tagName === "BUTTON") {
+//       const item = button.closest(".item");
+//       const parent = item.parentNode;
+//       if (button.classList.contains("moveUp") && item.previousElementSibling) {
+//         parent.insertBefore(item, item.previousElementSibling);
+//       }
+//       if (button.classList.contains("moveDown") && item.nextElementSibling) {
+//         parent.insertBefore(item, item.nextElementSibling.nextElementSibling);
+//       }
+//     }
+//   });
