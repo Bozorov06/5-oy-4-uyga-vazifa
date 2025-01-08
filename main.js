@@ -271,13 +271,14 @@ const container = document.getElementById('itemsContainer')
     const button  = event.target
     if (button.tagName === 'BUTTON') {
         const item = button.closest(".item");
+        const parent = item.parentNode
         if (button.classList.containes('moveUp') &&
         item.previousElementSibling
         ){
-            this.parentNode.insertBefore(item, item.previousElementSibling);
+         parent.insertBefore(item, item.previousElementSibling);
         }
         if (button.classList.containes('moveDown')&& item.nextElementSibling) {
-            this.parentNode.insertBefore(item,item.nextElementSibling)
+         parent.insertBefore(item,item.nextElementSibling)
         }
     }
  })
