@@ -103,12 +103,13 @@
 //         let block = document.createElement('div')
 //         block.style.width = '200px'
 //         block.style.height = "200px";
+//         block.style.marginLeft='20px'
 //         block.style.display = "inline-block";
-//         block.style.backgroundColor = "red";
-//         if (this.innerHTML == 'right') {
-//             card.after(block)
+//         block.style.backgroundColor = "blue";
+//         if (this.innerHTML == 'left') {
+//             card.before(block)
 //         }else{
-//             card.before(block);
+//             card.after(block);
 //         }
 //     })
 // })
@@ -215,22 +216,26 @@
 // // Vazifa: Sahifada bir nechta rangli kvadratlar (div) bo‘lsin. Har bir kvadratni boshqa kvadrat bilan almashtirish tugmasi bo‘lsin. Tugma bosilganda, o‘sha kvadrat boshqa tanlangan kvadrat bilan joylarini almashtirsin (ularni DOM ichida joylashtirish tartibi o‘zgaradi).
 // // Ishlatiladigan mavzular: parentNode, replaceChild, appendChild.
 
-// const container = document.getElementById('container')
-// const swapButton = document.getElementById("swapButton");
+// const container = document.getElementById("container");
+// const swapButtons = document.querySelectorAll(".swapButton");
 
+// swapButtons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     const square1 = this.parentNode;
+//     let square2 = square1.nextElementSibling;
+//     if (!square2) {
+//       square2 = square1.previousElementSibling;
+//     }
 
-// swapButton.addEventListener('click', function(){
-//     const square1 = document.getElementById("square1")
-//     const square2 = document.getElementById("square2");
-//     swapSquares(square1,square2)
-// })
+//     swapSquares(square1, square2);
+//   });
+// });
 
 // function swapSquares(square1, square2) {
-//     const parent = square1.parentNode;
-//     parent.replaceChild(square1, square2);
-//     parent.appendChild(square1)
+//   const parent = square1.parentNode;
+//   parent.replaceChild(square2, square1);
+//   parent.appendChild(square1);
 // }
-
 
 // // ================================================================================================================================
 // // 13. Matn uzunligini ko‘rsatish
