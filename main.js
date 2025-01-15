@@ -58,7 +58,7 @@ btn && btn.addEventListener('click', function(){
 // // Vazifa: Sahifada bir nechta tugmalar bo‘lsin. Har safar foydalanuvchi sahifaga kirganda, tugmalardan biriga avtomatik ravishda "qizil" klassi qo‘shiladi. Foydalanuvchi boshqa tugmalarni bosganda, yangi tugmaga "qizil" klassi o‘tadi, avvalgisi esa "qizil" klassini yo‘qotadi.
 // // Ishlatiladigan mavzular: classList.add, classList.remove, classList.contains.
 
-const buttoons = document.querySelectorAll(".button")
+const buttoons = document.querySelectorAll(".buttonn")
         buttoons[0].classList.add("qizil");
  buttoons.forEach((button) => {
    button.addEventListener("click", function () {
@@ -138,7 +138,7 @@ show && show.addEventListener('click', function(){
 // // Vazifa: Sahifada bir nechta matnli elementlar (p) va "Kesish" tugmasi bo‘lsin. Foydalanuvchi biror matnni tanlab, uning yonidagi "Kesish" tugmasini bossa, o‘sha matn kesilib, boshqa bir bo‘sh joyga (kvadrat) o‘tkazilsin.
 // // Ishlatiladigan mavzular: removeChild, appendChild.
 
-  const buttonss = document.querySelectorAll(".btn");
+  const buttonss = document.querySelectorAll(".bttn");
 
   buttonss.forEach((btn) => {
     btn && btn.addEventListener("click", function () {
@@ -190,7 +190,7 @@ show && show.addEventListener('click', function(){
 
 
  const hides = document.querySelectorAll(".hide");
- const blocks = document.querySelectorAll(".block"); 
+ const blocks = document.querySelectorAll(".blockk"); 
  const shows = document.getElementById("show");
 
  
